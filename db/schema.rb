@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217171150) do
+ActiveRecord::Schema.define(version: 20160217184845) do
 
   create_table "application_drafts", force: :cascade do |t|
     t.integer  "application_template_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id",                 limit: 4
-    t.boolean  "eeo_enabled",                       default: true
   end
 
   create_table "application_records", force: :cascade do |t|
@@ -39,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160217171150) do
     t.integer  "position_id", limit: 4
     t.boolean  "visible",               default: true
     t.boolean  "active",                default: true
+    t.boolean  "eeo_enabled",           default: true
   end
 
   create_table "departments", force: :cascade do |t|
