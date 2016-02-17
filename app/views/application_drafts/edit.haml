@@ -45,11 +45,6 @@
               required: !question.new_record?
             .field_attribute
               = g.check_box :required
-        .field_row
-          .field_attribute_1
-            Request Equal Employement Opportunity (EEO) Data
-          .field_attribute
-            = check_box("draft", "eeo_enabled")
       .actions
         = f.submit 'Save changes and continue editing'
         = f.submit 'Preview changes'
